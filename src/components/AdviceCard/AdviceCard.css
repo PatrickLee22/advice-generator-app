@@ -1,0 +1,78 @@
+.advice-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    min-width: 100px;
+    width: 76%;
+    max-width: 300px;
+
+    height: 255px;
+
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 150px;
+
+    background-color: var(--dark-grayish-blue);
+}
+
+.advice-title{
+    color: var(--neon-green);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.advice-message{
+
+    height: 180px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.advice-divider{
+    position: relative;
+    bottom: -43px;
+}
+
+
+.advice-button{
+    display: grid;
+    align-items: center;
+    position: relative;
+    bottom: -65px;
+
+    width: 70px;
+    height: 70px;
+    padding: 23px;
+
+    border-width: 0;
+    background-color: var(--neon-green);
+    border-radius: 70px;
+}
+
+.advice-button:hover{
+    box-shadow:  0 0 25px var(--neon-green);
+}
+
+@media screen and (min-width: 400px){
+    .advice-card{
+        min-width: 500px;
+        width: 35vw;
+        max-width: 560px;
+        
+        height: 320px;
+    }
+
+    .advice-message{
+        height: 180px;
+        font-size: 28px;
+        text-align: center;
+        margin: 20px;
+    }
+    
+
+    .advice-button{
+        bottom: -60px;
+    }
+}

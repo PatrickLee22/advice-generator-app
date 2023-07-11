@@ -1,0 +1,19 @@
+#root {
+  background-color: var(--dark-blue);
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 96vw;
+  height: 98vh;
+}
+
+@media screen and (min-width: 400px){
+  .app{
+    width: 100vw;
+  }
+}

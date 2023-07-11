@@ -20,14 +20,20 @@ const AdviceCard = ({isDesktop}: Props) =>{
     message: "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
   })
 
+
+  const myHeaders = new Headers();
+  myHeaders.append('pragma', 'no-cache')
+  myHeaders.append('cache-control', 'no-cache')
+  myHeaders.append('access-control-allow-origin', '*')
+
   const handleClick = async () =>{
-    await fetch('https://api.adviceslip.com/advice')
+    await fetch('https://api.adviceslip.com/advice', {cache: "no-cache"})
       .then(res => res.json())
       .then((data) =>{
         console.log(data)
         setAdvice({
-          id: Number(data.slip.id), 
-          message: String(data.slip.advice),
+          id: data.slip.id,
+          message: data.slip.advice,
         })
       })
       .catch(err =>{
